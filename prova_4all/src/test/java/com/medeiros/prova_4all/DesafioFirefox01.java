@@ -12,17 +12,17 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testcontainers.shaded.org.apache.commons.io.FileUtils;
 
-public class DesafioChrome01 {
+public class DesafioFirefox01 {
 
 	private WebDriver driver;
 
 	@Before
 	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\mateu\\Documents\\Dev\\Gecko\\geckodriver.exe");
+		driver = new FirefoxDriver();
 		driver.get("https://shopcart-challenge.4all.com/");
 		driver.manage().window().maximize();
 	}
